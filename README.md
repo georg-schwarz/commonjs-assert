@@ -18,6 +18,10 @@ To use this module directly (without browserify), install it as a dependency:
 npm install assert
 ```
 
+If you want to avoid ambiguity whether you mean to use this library or [Node.js `assert` API](https://nodejs.org/api/assert.html) you can 
+- use this library explicitly by `require(assert/)` (note the trailing `/`), or
+- use [Node.js `assert` API](https://nodejs.org/api/assert.html) explicitly by `require(node:assert)`.
+
 ## Inconsistencies with Node.js `assert`
 
 Due to differences between browsers, some error properties such as `message` and `stack` will be inconsistent. However the assertion behaviour is as close as possible to Node.js and the same error `code` will always be used.
